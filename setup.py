@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '0.1.8'
+VERSION = '0.1.9'
 PACKAGE_NAME = 'nordvpn_switcher'
 AUTHOR = 'Kristof Boghe'
 AUTHOR_EMAIL = 'kboghe@gmail.com'
