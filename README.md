@@ -1,8 +1,6 @@
 # NordVPN-switcher
 Rotate between different NordVPN servers with ease. Works both on Linux and Windows without any required changes to your code.
 
-`pip install nordvpn-switcher` and you're all set!
-
 Created by Kristof Boghe
 
 # But...why?
@@ -52,27 +50,16 @@ sudo apt install nordvpn
 (From the NordVPN FAQ)
 
 * On Windows
-
 Download the app here --> https://bit.ly/3ig2lU5
 
-2. Install the package 
-
-* Execute in terminal:
-```
-pip install nordvpn-switcher
-```
-
-OR, for the ones who don't use pip for some reason:
-* Download/clone this repository
-* Run `pip install -r requirements.txt` to install dependencies
-
-3. Import functions`from nordvpn_switcher import initialize_VPN,rotate_VPN,terminate_VPN
-
-That's it!
+2. Download/clone this repository
+3. Run `pip install -r requirements.txt` to install dependencies
+4. Import functions`from nordvpn_switcher import initialize_VPN,rotate_VPN,terminate_VPN
+5. That's it!
 
 # The building blocks
 
-* In essence, you'll just use the following three functions:
+* The main building blocks of NordVPN-switcher consists of three main functions: 
 
 **1. Setting up your NordVPN settings**
 - save: if you want to save these settings for later
@@ -210,7 +197,6 @@ rotate_VPN(instructions)
 * Linux users have a couple of additional options at their disposal, namely:
 
 1.Being able to log in through the Python interface. Windows users need to make sure they're already logged into the NordVPN app. The Windows app remembers your log in by default though, so this shouldn't cause too much trouble. So even when the app is closed, NordVPN-switcher should work.
-
 2.Executing additional settings (e.g. killswitch etc.)
 
 * Settings files can't be directly shared between Windows and Linux machines (see option 4 - how to use). Of course, with a little tweaking, separate Windows and Linux settings-files can easily be constructed for your specific project.
