@@ -191,12 +191,15 @@ def initialize_VPN(stored_settings=0,save=0,area_input=None):
 
         #however, if provided, just skip the additional settings option and execute the stored settings.#
         if 'instructions' in locals():
-            if len(instructions['additional_settings'][0][0]) > 0:
-                print("Executing stored additional settings....\n")
-                for count,instruction in enumerate(instructions['additional_settings']):
-                    print("Executing stored setting #"+str(count+1)+": "+str(instruction))
-                    additional_settings_linux(instruction)
-            else:
+            try:
+                if len(instructions['additional_settings'][0][0]) > 0:
+                    print("Executing stored additional settings....\n")
+                    for count,instruction in enumerate(instructions['additional_settings']):
+                        print("Executing stored setting #"+str(count+1)+": "+str(instruction))
+                        additional_settings_linux(instruction)
+                else:
+                    pass
+            except Exception:
                 pass
 
     else:
